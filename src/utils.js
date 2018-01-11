@@ -30,3 +30,15 @@ export function reduceData (fullData) {
   }
   return result
 }
+
+export function getCoordinates (e) {
+  let { clientX, clientY } = e
+  // for touch event
+  if (e.touches && e.touches.length) {
+    clientX = e.touches[0].clientX
+    clientY = e.touches[0].clientY
+  }
+  const { left, top } = e.target.getBoundingClientRect()
+  const [x, y] = [clientX - left, clientY - top]
+  return [x, y]
+}

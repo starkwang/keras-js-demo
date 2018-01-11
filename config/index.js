@@ -55,7 +55,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/keras-js-demo',
+    assetsPublicPath: '/keras-js-demo/dist',
 
     /**
      * Source Maps
